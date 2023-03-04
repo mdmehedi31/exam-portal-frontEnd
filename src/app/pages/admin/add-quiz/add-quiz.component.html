@@ -1,0 +1,70 @@
+
+
+<mat-card class="mt20 mb20">
+    <div mat-subheader class="text-center"><h1>Add Quiz</h1></div>
+     <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-2">
+                <form (ngSubmit)="addQuiz()">
+                    <mat-form-field appearance="outline" class="w100">
+                        <mat-label>Title</mat-label>
+                        <input [(ngModel)]="quiz.title" 
+                        type="text"
+                        name="title"
+                        matInput
+                        required
+                        placeholder="Write Title"/>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w100">
+                        <mat-label>Description</mat-label>
+                        <textarea [(ngModel)]="quiz.description" name="description"  matInput placeholder="Write Description" rows="4"></textarea>
+                    </mat-form-field>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Total Question</mat-label>
+                                <input
+                                    [(ngModel)]="quiz.numberOfQuestion"
+                                    type="text"
+                                    name="totalQuestion"
+                                    placeholder="Enter Total Question"
+                                    matInput/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                           <mat-form-field class="w100" appearance="outline">
+                                <mat-label>Total Marks</mat-label>
+                                <input
+                                    [(ngModel)]="quiz.maxMarks"
+                                    type="text"
+                                    name="totalMarks"
+                                    placeholder="Totak Marks"
+                                    matInput/>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-slide-toggle 
+                    name="active"
+                    [(ngModel)]="quiz.active"
+                    class="mt10 mb20" >
+                          Publish Status
+                    </mat-slide-toggle>
+                    <br>
+                    <mat-form-field appearance="outline" class="mt20 w100">
+                        <mat-label>Category</mat-label>
+                        <mat-select name="category" [(ngModel)]="quiz.category.catId">
+                          <mat-option *ngFor="let c of categories" [value]="c.catId">
+                            {{c.title}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <div class="container text-center mb20 mr40">
+                        <button  mat-raised-button color="primary" type="submit">Add Quiz</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+     </div>
+</mat-card>

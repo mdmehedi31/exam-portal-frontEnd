@@ -1,0 +1,18 @@
+
+<mat-card class="mt20">
+    <mat-list>
+        <div mat-subheader class="text-center">All Categories</div>
+        <mat-list-item *ngFor="let c of categories">
+            <mat-card class="mt20">
+            <div mat-line><b>{{ c.title }}</b></div>
+            <div mat-line><p>{{ c.description }}</p></div>
+        </mat-card>
+            <mat-divider style="color:dodgerblue"></mat-divider> 
+        </mat-list-item> 
+    </mat-list>
+
+    <div class="container text-center mr50">
+        <button routerLink="/admin/add-category" mat-raised-button color="primary">Add Category</button>
+    </div>
+
+</mat-card>

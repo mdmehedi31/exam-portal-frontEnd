@@ -1,0 +1,48 @@
+<mat-card>
+    <!--*ngIf="user"-->
+    <mat-card-content>
+        <div class="text-center" mat-subheader>Profile Details</div>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://i.stack.imgur.com/34AD2.jpg" 
+                    atl=""
+                    class="profile-images"/>
+                    <h2 class="mt20, blod" >Md Mehedi Hasan<!--{{user.firstName}} {{user.lastName}}--></h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="tb text-center">
+                            <tr>
+                                <td>Username : </td>
+                                <td>mehedi32<!--user.username--></td>
+                            </tr>
+                            <tr>
+                                <td>User Id: </td>
+                                <td>mehedi234 <!--user.id--></td>
+                            </tr>
+                            <tr *ngIf=""user.phone>
+                                <td>Phone : </td>
+                                <td>+8801973358272 <!--user.phone--></td>
+                            </tr>
+                            <tr>
+                                <td>Role : </td>
+                                <td>ADMIN <!--user.authorities[0].authority--></td>
+                            </tr>
+                           <tr>
+                            <td>Status</td>
+                            <td>Active <!--user.enabled?"ONLINE":"OFFLINE"--></td>
+                           </tr>
+                            <mat-card-actions class="text-center">
+                                <button mat-raised-button color="primary">UPDATE</button>
+                                <button mat-raised-button color="accent">SHARE</button>
+                            </mat-card-actions>
+                     
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
