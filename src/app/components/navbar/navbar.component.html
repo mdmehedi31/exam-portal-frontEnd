@@ -10,9 +10,17 @@
    <a
    [routerLink]="'/admin'"
     mat-icon-button 
-    class="example-icon favorite-icon" 
+    class="example-icon favorite-icon mr20" 
     aria-label="Example icon-button with heart icon">
     admin</a>
+   
+   <a
+      [routerLink]="'/user-dashboard'"
+      mat-icon-button
+      class="ml20"
+      aria-label="Example icon-button with hear icon"
+   >User</a>
+
    <span class="example-spacer"></span>
    <a
   *ngIf="!isLoggedIn" 

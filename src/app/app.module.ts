@@ -35,6 +35,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { UserSidebarComponent } from './pages/user/user-sidebar/user-sidebar.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +59,8 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
     UpdateQuizComponent,
     ViewQuestionsComponent,
     AddQuestionComponent,
+    UserSidebarComponent,
+    LoadQuizComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +77,8 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
     MatIconModule,
     MatListModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+ 
   ],
  // providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

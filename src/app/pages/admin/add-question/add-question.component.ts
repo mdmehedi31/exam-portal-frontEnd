@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class AddQuestionComponent implements OnInit {
 
+  
 
   qzId:any;
  
