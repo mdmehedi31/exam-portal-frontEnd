@@ -1,0 +1,20 @@
+.trnct{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+
+
+.icon-images {
+    background-image: url('../../../../assets/quiz-exam.png');
+    background-size: cover;
+  
+  }
+
+  .mat-success {
+    background-color: green;
+    color: #fff;
+}
