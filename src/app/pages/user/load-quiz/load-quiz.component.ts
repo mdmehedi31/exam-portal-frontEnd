@@ -10,16 +10,16 @@ import { QuizService } from 'src/app/services/quiz.service';
 export class LoadQuizComponent implements OnInit {
 
 
-  catsId:any
+  catId:any
   quizees:any;
 
   constructor(private route: ActivatedRoute, private quizServie: QuizService){}
 
   ngOnInit(): void {
      this.route.params.subscribe((params)=>{
-        this.catsId=params['catId'];
-        if (this.catsId == 0) {
-          this.quizServie.getActiveQuizzes().subscribe(
+        this.catId=params['catId'];
+        if (this.catId == 0) {
+          this.quizServie.quizzes().subscribe(
             (data:any)=>{
               this.quizees=data;
               console.log(this.quizees);
@@ -31,7 +31,7 @@ export class LoadQuizComponent implements OnInit {
           );
         } else {
           console.log("Load specific quiz");
-          this.quizServie.getActiveCategoryQuizzes(this.catsId).subscribe(
+          this.quizServie.getQuizzesOfCategory(this.catId).subscribe(
             (data:any)=>{
               this.quizees=data;
             },

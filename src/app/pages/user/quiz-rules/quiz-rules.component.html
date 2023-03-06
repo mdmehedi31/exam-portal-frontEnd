@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <mat-card>
+                    <mat-card-header>
+
+                        <mat-card-title>
+                            Follow The instructin Carefully
+                        </mat-card-title>
+                    </mat-card-header>
+
+                    <mat-card-content class="ml25">
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.desceiption}}</p>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <p>Importnat Instruction</p>
+                        <ol>
+                            <li>Its Practics MCQ Test</li>
+                            <li>This Exam contain total <b>{{quiz.numberOfQuestion}}, </b> questions </li>
+                            <li>Exam Time is : <b> {{quiz.numberOfQuestion*1.5}} </b></li>
+                            <li>Please Concern About Time, Submit With in Time</li>
+                            <li>You Will Get <b> {{quiz.maxMarks/quiz.numberOfQuestion}} </b> For Each Question</li>
+                        </ol>
+                    </mat-card-content>
+
+                    <mat-card-actions class="text-center">
+                            <button [routerLink]="'/quiz-start/'+qid" mat-raised-button color="primary">START QUIZ</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

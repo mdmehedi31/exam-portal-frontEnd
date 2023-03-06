@@ -22,7 +22,8 @@
                     </mat-card-content>
                     <mat-card-actions>
                         <button mat-raised-button class="mr25" color="primary">VIEW</button>
-                        <button mat-raised-button class="mr25" color="primary" >START</button>
+                        <button mat-raised-button [routerLink]="'/user-dashboard/quiz-rules/'+q.qId"
+                             class="mr25" color="primary" >START</button>
                         <button mat-stroked-button class="mr25" color="accent">Marks: {{q.maxMarks}}</button>
                         <button mat-stroked-button color="accent">Question: {{q.numberOfQuestion}}</button>
                     </mat-card-actions>

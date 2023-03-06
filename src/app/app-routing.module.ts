@@ -15,6 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { QuizStartComponent } from './pages/user/quiz-start/quiz-start.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
@@ -85,9 +86,17 @@ const routes: Routes = [
       {
         path:':catId',
         component: LoadQuizComponent
-      }
+      },
+      {
+        path:'quiz-rules/:qId',
+        component:AddQuizComponent,
+      },
     ]
   },
+  {
+    path:'quiz-start/:qId',
+    component: QuizStartComponent,
+},
 ];
 
 @NgModule({
